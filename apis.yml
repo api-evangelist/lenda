@@ -1,19 +1,53 @@
 aid: lenda
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lenda.png
 name: Lenda
-description: Lenda is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'Lenda was surfaced as a 500 Global portfolio company and added to the
+  API Evangelist network as a stub for enrichment. Enrichment on 2026-07-19 found no
+  operating surface: lenda.com returns HTTP 200 but serves only a parked single-page
+  notice offering the domain for sale via a contact form, hosted on AWS and registered
+  through Amazon Registrar. Every developer-facing subdomain probed (api, developer,
+  developers, docs, app, status, blog) is NXDOMAIN, the full /.well-known/ discovery
+  surface plus /llms.txt, /openapi.json and /robots.txt all return 404, and there is
+  no first-party package on npm or PyPI and no company GitHub organization. This company
+  is treated as defunct with no API to catalog; no artifact pointers are wired because
+  no artifacts genuinely exist.'
 url: https://raw.githubusercontent.com/api-evangelist/lenda/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: defunct
+x-tier-reason: domain-parked-no-api-surface
+x-status: defunct
+x-status-verified: '2026-07-19'
+x-status-evidence:
+- lenda.com HTTP 200 serving a "domain for sale" parking page, not a company site
+- api/developer/developers/docs/app/status/blog subdomains all NXDOMAIN
+- all /.well-known/ probes plus /llms.txt, /openapi.json, /robots.txt returned 404
+- no npm or PyPI package named lenda; github.com/Lenda is an unrelated individual account
+x-enrichment-note: Historically reported as a San Francisco online-mortgage startup,
+  but no such claim could be verified from a live first-party source during this run,
+  so no historical detail is asserted here as fact.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Defunct
+- Portfolio Lead
+- 500 Global
+- No API Surface
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +56,10 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  name: Lenda.com (parked — domain offered for sale, not an operating site)
   url: https://lenda.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
