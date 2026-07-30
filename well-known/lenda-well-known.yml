@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://lenda.com
+host: https://lenda.com
+# All probes returned 404. lenda.com no longer serves a company site — it resolves
+# to a parked "domain for sale" page (see apis.yml x-status). No /.well-known/
+# discovery surface exists, so NO `WellKnown` or `SecurityTxt` pointer is wired in
+# apis.yml. This file records the negative result so re-runs need not re-probe.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /llms.txt
+  status: 404
+- path: /openapi.json
+  status: 404
+- path: /robots.txt
+  status: 404
