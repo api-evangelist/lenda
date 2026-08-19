@@ -39,7 +39,7 @@ x-status-evidence:
 x-enrichment-note: Historically reported as a San Francisco online-mortgage startup,
   but no such claim could be verified from a live first-party source during this run,
   so no historical detail is asserted here as fact.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
